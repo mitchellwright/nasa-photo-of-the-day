@@ -1,6 +1,11 @@
 import React from "react";
 import "./App.css";
 import axios from "axios";
+import Title from "./Title/Title.js";
+import Date from "./Date/Date.js";
+import Image from "./Image/Image.js";
+import SharingButton from "./SharingButton/SharingButton.js"
+import Description from "./Description/Description.js";
 
 function App() {
   /* Object format from APOD:
@@ -18,10 +23,12 @@ function App() {
   */
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <Title />
+      <Date />
+      <Image />
+      <SharingButton />
+      <SharingButton />
+      <Description />
     </div>
   );
 }

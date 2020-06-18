@@ -5,7 +5,7 @@ import "../App.css";
 
 const Video = props => {
     return (
-        <iframe width="560" height="315" src={props.url} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title="POTD"></iframe>
+        <iframe width="560" height="315" className="text-center" src={props.url} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title="POTD"></iframe>
     );
 };
 

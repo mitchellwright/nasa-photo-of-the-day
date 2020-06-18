@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row } from 'reactstrap';
 import Title from "./Title/Title.js";
 import Date from "./Date/Date.js";
 import Image from "./Image/Image.js";
@@ -24,29 +24,17 @@ function App() {
   }, []);
 
   return (
-    <Container>
-      <Row>
+    <Container className="container">
         <Title title={photoInfo.title} />
-      </Row>
-      <Row>
         <Date date={photoInfo.date} />
-      </Row>
-      <Row>
-        <Col md={{ size: 6, offset: 3 }}>
-          {photoInfo.media_type === "video"
-              ? <Video url={photoInfo.url} />
-              : <Image src={photoInfo.url} />
-          }
-        </Col>
-      </Row>
-      <Row>
-        <Col sm={{size: 3, offset: 3}}>
+        {photoInfo.media_type === "video"
+            ? <Video url={photoInfo.url} />
+            : <Image src={photoInfo.url} />
+        }
+        <div className="text-center share-buttons">
           <SharingButton website="twitter" />
-        </Col>
-        <Col sm={{size: 3, offset: 1}}>
           <SharingButton website="facebook" />
-        </Col>
-      </Row>
+        </div>
       <Row>
         <Description description={photoInfo.explanation}/>
       </Row>

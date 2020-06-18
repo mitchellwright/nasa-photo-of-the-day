@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.container {
+  margin-top: 3rem;
+}
+
+.share-buttons {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.share-buttons a:first-child {
+  margin-right: 5rem;
+}
